@@ -1,31 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Words</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>English</th>
-      <th>Afar</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @words.each do |word| %>
-      <tr>
-        <td><%= word.english %></td>
-        <td><%= word.afar %></td>
-        <td><%= word.category_id %></td>
-        <td><%= link_to 'Show', word %></td>
-        <td><%= link_to 'Edit', edit_word_path(word) %></td>
-        <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<script>
+  function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+    }
+</script>  
+  <% @words.each_with_index do |word| %>
+   <p>
+      <input type="button" class= "btn btn-default" value= <%=word.english %> <%=word.english %>  onclick="play()">
+     
+      <audio id = "audio">
+        <source src= <%= audio_path word.english %> type="audio/mpeg" controls>
+        Your browser does not support the audio element.
+      </audio>
+   </p>
+  <% end %>
 <br>
 
-<%= link_to 'New Word', new_word_path %>
+
+
+  
+
