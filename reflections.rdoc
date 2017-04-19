@@ -1,0 +1,63 @@
+A simple app with sound for Mariam's project
+
+Step 1 - I set up a new ruby workspace in Cloud9
+
+Step 2 - /workspace $  rails g scaffold Words english:string afar:string category_id:integer 
+
+            This will create models, and controllers, and views
+            This other choice was to follow the lesson in Getting Started, building controllers, and models as separate steps.
+  
+Step 3 - Open the folder in my db/migrate to see that rails gave us a new present (a new migration to the database)         
+            Based on the above, it looks like this...
+                class CreateWords < ActiveRecord::Migration
+              def change
+                create_table :words do |t|
+                  t.string :english
+                  t.string :afar
+                  t.integer :category_id
+            
+                  t.timestamps null: false
+                end
+              end
+            end
+            http://edgeguides.rubyonrails.org/active_record_migrations.html
+            
+            To get there from your project. 
+            If you would like to add the colum :afar (optional) you can do that with 
+            /workspace $  rails g migrations add :afar_to_words  afar:string 
+            
+Step 4 - Checkout the controller and view folders, more presents from Rails. They have added a model, controller and views for Word.
+
+Step 5 - My curiosity makes me want to see what we have if we run in the console... 
+         /workspace $   rails s -b $IP -p $PORT
+         Oh - The Active Record message told me this...
+         Migrations are pending. To resolve this issue, run: bin/rake db:migrate RAILS_ENV=development
+         
+         I forgot to migrate. Let's do that. 
+         
+Step 3 (forgot to migrate)  /workspace $ bin/rake db:migrate RAILS_ENV=development, Yeah! I got the famous Rails page. 
+https://rakiibo-tazzyg1.c9users.io/
+
+Step 6 - Let's see what happens if I try https://rakiibo-tazzyg1.c9users.io/words ... Wow, another surprise! I can see my words. 
+
+Step 7 - Let's take a look at config/routes and see what is there. Look at that, that rails g scaffold is great! It set up a root for word. 
+            I see we have a form too, let's try it!  
+            It works! 
+        What do you say, I think we should save this in Git. I am not going to push this to Heroku. I have decised I will save this in git instead of bitbuck
+        
+Step 8 - Let's save this to git. Reference "RailsTutorial.org" I picked Chapter 2 (any part with the Git steps)
+            $ git init
+            $ git add -A
+            $ git commit -m "Initialize repository"
+
+        I will set up a github repository (instead of bitbucket). What do you know there is one there already. 
+        Let's use that. But I see it has a readme... so I will rename this document so we have 2 docs. 
+            
+            
+         
+        
+        
+            
+    
+
+
