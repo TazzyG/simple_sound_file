@@ -76,11 +76,10 @@ part 3 - Using Ruby (magic) to make the sound play.
             Hmmm.. what has song in it. I wonder what we could do this with code 
             word.english  
 part 4 - Let's put some code into our list of words in index that looks uses the audo code and uses word.english
-    
-          Had some challenges - google gave me this 
-          https://apidock.com/rails/ActionView/Helpers/AssetTagHelper/audio_path
-          I will follow this example, audio_path("horse.wav") 
-            rename my folder to audios and make the code the same. 
+         I got the same issue when I put the code into index, the first sound would play each time.
+         
+         So, I did a hack by putting the sound code into show.html and making it play when you click on the word.
+         Now we have different sounds for each word. 
           
 part 5 - Open my browser and give it a try now. 
         

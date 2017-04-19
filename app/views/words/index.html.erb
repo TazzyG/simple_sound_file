@@ -1,23 +1,5 @@
-<p id="notice"><%= notice %></p>
-<script>
-  function play() {
-    var audio = document.getElementById("audio");
-    audio.play();
-    }
-</script>  
-  <% @words.each_with_index do |word| %>
-   <p>
-      <input type="button" class= "btn btn-default" value= <%=word.english %> <%=word.english %>  onclick="play()">
-     
-      <audio id = "audio">
-        <source src= <%= audio_path word.english %> type="audio/mpeg" controls>
-        Your browser does not support the audio element.
-      </audio>
-   </p>
-  <% end %>
-<br>
-
-
-
-  
-
+    <% @words.each do |word| %>
+      <p>
+        <button><%= link_to word.english, word, class: "btn btn-default" %></button>
+      </p>
+    <% end %>

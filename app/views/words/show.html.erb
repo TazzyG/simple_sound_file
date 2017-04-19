@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<script>
+  function play() {
+    var audio = document.getElementById("audio");
+    
+    }
+    
+</script> 
+  
+  
+  
+   <p>
 
-<p>
-  <strong>English:</strong>
-  <%= @word.english %>
-</p>
-
-<p>
-  <strong>Afar:</strong>
-  <%= @word.afar %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @word.category_id %>
-</p>
-
-<%= link_to 'Edit', edit_word_path(@word) %> |
-<%= link_to 'Back', words_path %>
+      <input type="button" class= "btn btn-default" value= <%=@word.english %>   onclick="play()">
+      <audio id = "audio">
+        <source src= <%= audio_path @word.english %> type="audio/mpeg" controls>
+        Your browser does not support the audio element.
+      </audio>
+      <script>
+       audio.play();
+      </script>
+   </p>
+   
+ 
