@@ -1,0 +1,4 @@
+<h1><%= @category.name %> </h1>
+<% @category.words.each do |word| %>
+    <button><%= link_to word.english, word, class: "btn btn-default" %></button>
+ <% end %>

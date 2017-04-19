@@ -56,33 +56,40 @@ Step 8 - Let's save this to git. Reference "RailsTutorial.org" I picked Chapter 
             It worked  https://github.com/TazzyG/word_app
 Step 9 - Sound... Ick! - The nasty challenge. 
 
-Part 1 - I will load up a sound file and name it the same as the word I am going to make. 
-            Create new folder in assets - audio
-            Upload a file ... used my standby song and renamed it to "song" I will use that as my word. 
+Upload sample sound files and name it the same as the word I am going to make. 
+            Created new folder in assets - audios
+            Upload a couple files
             
-part 2 - The js script code to play sound
-            In my word index.html.erb file I will paste this code (reference my April 10 email to you with a suggested solution. 
-            
-             
-                  <script> function play() {
-                  var audio = document.getElementById("audio");
-                  audio.play();
-                  }
-                  </script>   
-            
-part 3 - Using Ruby (magic) to make the sound play.
-            Remember we can substitue the code to get content. 
-            So, how can we make a sound file like this "song.mp3" from the code?
-            Hmmm.. what has song in it. I wonder what we could do this with code 
-            word.english  
-part 4 - Let's put some code into our list of words in index that looks uses the audo code and uses word.english
-         I got the same issue when I put the code into index, the first sound would play each time.
-         
-         So, I did a hack by putting the sound code into show.html and making it play when you click on the word.
-         Now we have different sounds for each word. 
-          
-part 5 - Open my browser and give it a try now. 
-        
+I got the same problem, only the first sound was playing when I clicked it. I tried a few things.
+Then I remembered that it works in show.html. So, it looks like javascript takes the sound once and does not recognize what is going on in ruby each loops.
+I am sure there is a fix for that, but I am still new at getting ruby and javascript to work together. 
+
+So, another approach. 
+
+I tried putting the sound code into show and making it play on click. That works. 
+https://rakiibo-tazzyg1.c9users.io/words
+
+Step 10 - Now how about categories?
+Approach. Different from the getting started link, I am just going to create a new model for category and relate them to word.
+
+Step 11 - rails g model categories name:string icon:string  before that... Time to do a git push first
+Done, migrate file looks good so bin/rake db:migrate
+
+Step 12, I will associate them in the models (belongs_to, has_many)
+
+Step 13, Create a controller for categories  ... rails g controller Categories
+
+Step 14, create views, and controller, add route. 
+
+Step 15 - Time to stop. No css, I did not add bootstrap. 
+Note: I am going to change the root path to categories, index 
+
+Played with it, it looks good now. 
+
+
+
+    
+
 
             
          
