@@ -5,3 +5,9 @@
 a {
     text-decoration: none;
 }
+
+@media(max-width:320px) {
+    #words {
+        display: none;
+    }
+}
