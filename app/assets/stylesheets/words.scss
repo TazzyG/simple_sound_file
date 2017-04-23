@@ -9,8 +9,11 @@ a {
 }
 
 
-@media(max-width:320px) {
-    #words {
-        display: none;
+#words {
+    button {
+        width: 12em;
+        height: 2em;
+        background-color: #fff;
+        border-color: #fff;
     }
 }
