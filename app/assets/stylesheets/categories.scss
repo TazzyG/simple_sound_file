@@ -2,8 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#words {
+#word {
     
     padding-left: 2em;
+    button { 
+      width: 150px; 
+      height: 25px;
+      font-size: 18px;
+    } 
+
+
     
+}
+
+#category {
+    background: rgba(255,255,255,0.5);
+    width: 15%;
+    height: 5%;
+    padding: 3%;
+    margin: 5%;
+    display: inline-block;
 }

@@ -1,14 +1,15 @@
+
 <% @categories.each do |category| %>
 <div id= "category">
   <%= link_to category_path(category) do %>
      <h2> <%= category.name %> </h2>
   <% end %> 
-  <div id = "words" >
+ 
     <% category.words.each do |word| %>
-    
+    <div id = "word" >
       <button><%= link_to word.english, word, class: "btn btn-default" %></button>
     
-    
+    </div>
     <% end %>
   </div>  
  <% end %>   
