@@ -111,8 +111,7 @@ Any other we customize our selves.
 
 Step 7 git push and heroku push
 I did asset_precompile per this https://devcenter.heroku.com/articles/rails-asset-pipeline
-and also heroku bundle install after deploying
-
+and heroku rake db:migrate (not sure I needed to but did it anyway)
 
 Note you can add other scss pages, but you need to include them. I added a custom page.
 
