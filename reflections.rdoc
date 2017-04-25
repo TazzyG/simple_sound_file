@@ -109,6 +109,11 @@ Indeed, font awesome does not work with the scaffold.css (probably has css for i
 Step 6 Delete scaffold.css page (or any css, like that). This will leave us with only bootstrap css
 Any other we customize our selves. 
 
+Step 7 git push and heroku push
+I did asset_precompile per this https://devcenter.heroku.com/articles/rails-asset-pipeline
+and also heroku bundle install after deploying
+
+
 Note you can add other scss pages, but you need to include them. I added a custom page.
 
 It works! 
