@@ -1,17 +1,19 @@
-
-<% @categories.each do |category| %>
-<div id= "category">
-  <%= link_to category_path(category) do %>
-     <h2> <%= category.name %> </h2>
-  <% end %> 
- 
-    <% category.words.each do |word| %>
-    <div id = "word" >
-      <button><%= link_to word.english, word, class: "btn btn-default" %></button>
-    
+<div class = "row">
+  <div class = "col-md-offset-1 col-md-10 col-xs-12">
+    <% @categories.each do |category| %>
+    <div id= "category">
+      <%= link_to category_path(category) do %>
+         <h2><i class="<%= category.icon %>"> <%= category.name %></i></h2>
+      <% end %> 
+        <% category.words.each do |word| %>
+          <div class= "row text-center">
+            <div class = "word col-md-offset-2 col-md-8 col-xs-12">
+             <%= link_to word.english, word,  class: "categories btn btn-block btn-lg btn-default" %>
+            </div>
+          </div>
+       <% end %>
+      </div>  
+     <% end %>   
+      
     </div>
-    <% end %>
-  </div>  
- <% end %>   
-  
-</div>
+  </div>

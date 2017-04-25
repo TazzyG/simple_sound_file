@@ -87,6 +87,41 @@ Note: I am going to change the root path to categories, index
 Played with it, it looks good now. 
 
 
+ADDING BOOTSTRAP AND FONT AWESOME
+
+Note, I went with Font-Awesome SASS instead of Rails, assuming it will work better with bootstrap sass
+
+Step 1 add gems and bundle REMEMBER RESTART SERVER ANYTIME YOU ADD GEMS OR MIGRATIONS
+
+Step 3 Make sure application.css is changed to application.scss
+
+Step 4  Add bootstrap to scss and js page and follow instructions in this page 
+https://github.com/twbs/bootstrap-sass
+
+Step 5 Add files for FontAwesome.
+http://fontawesome.io/  getting started and examples
+
+
+TESTED WITH SCAFFOLD CSS ...
+
+Indeed, font awesome does not work with the scaffold.css (probably has css for i, buttons etc.)
+
+Step 6 Delete scaffold.css page (or any css, like that). This will leave us with only bootstrap css
+Any other we customize our selves. 
+
+Note you can add other scss pages, but you need to include them. I added a custom page.
+
+It works! 
+
+Now we need to use bootstrap and customize
+
+Note: " " are important around string descriptions. That is what caused truncation of the words. 
+
+Good luck! 
+
+
+
+
 
     
 

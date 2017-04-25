@@ -10,7 +10,7 @@
   
    <p>
 
-      <input type="button" class= "btn btn-default" value= <%=@word.english %>   onclick="play()">
+      <input type="button" class= "btn btn-block btn-lg btn-default" value= "<%=@word.english %>"  onclick="play()">
       <audio id = "audio">
         <source src= <%= audio_path @word.english %> type="audio/mpeg" controls>
         Your browser does not support the audio element.
@@ -19,5 +19,9 @@
        audio.play();
       </script>
    </p>
-   
+   <div id="imagination" class= "text-center">
+    <h2>
+       <em> Only your imagination can tell you what will appear here in a future version of this app!</em>
+    </h2>
+   </div>
  

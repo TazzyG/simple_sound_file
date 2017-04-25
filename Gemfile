@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor'
 
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-sass', '~> 4.6', '>= 4.6.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
