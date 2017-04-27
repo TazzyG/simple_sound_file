@@ -1,5 +1,16 @@
-<% if @categories < 1 %> 
+
+  
+
+<% if @categories.count < 1%> 
+
+<div class= "text-center" id= "imagination">
+
 <h1> There are no categories yet! Let's get started </h1>
+<%= link_to "New Category", new_category_path, class: "btn btn-xl btn-primary" %>
+
+</div>
+<% else %>
+
 <div class = "row">
   <div class = "col-md-offset-2 col-md-8">
     <% @categories.each do |category| %>
@@ -16,3 +27,5 @@
     <% end %>   
   </div>
 </div>
+
+<% end %>
