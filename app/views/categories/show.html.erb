@@ -1,7 +1,11 @@
-<h2><i class="<%= @category.icon %>"><%= @category.name %></i></h2>
-<% @category.words.each do |word| %>
-    <button><%= link_to word.english, word, class: "btn btn-block btn-lg btn-default" %></button>
- <% end %>
- 
- 
- <i class= <%= @category.icon %> "fa-5x"> "My icon choice is" <%= @category.icon %></i> 
+<div class = "text-center">
+  <h2 class= "category"><i class="<%= @category.icon %>"><br><%= @category.name %></i></h2>
+  <% @category.words.each do |word| %>
+    <span class= "word"><%= link_to word.english, word, class: "btn btn-lg btn-default" %></span>
+  <% end %>
+  <p class = "text-center"> 
+  <%= link_to "Edit this Category", edit_category_path(@category) %> | <%= link_to 'Delete this Category', category_path(@category),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %> 
+  </p>
+</div>

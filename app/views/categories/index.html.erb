@@ -1,19 +1,18 @@
+<% if @categories < 1 %> 
+<h1> There are no categories yet! Let's get started </h1>
 <div class = "row">
-  <div class = "col-md-offset-1 col-md-10 col-xs-12">
+  <div class = "col-md-offset-2 col-md-8">
     <% @categories.each do |category| %>
-    <div id= "category">
+    <div id= "category" class= "row text-center">
       <%= link_to category_path(category) do %>
-         <h2><i class="<%= category.icon %>"> <%= category.name %></i></h2>
+         <h2><i class="<%= category.icon %>"><br> <%= category.name %></i></h2>
       <% end %> 
-        <% category.words.each do |word| %>
-          <div class= "row text-center">
-            <div class = "word col-md-offset-2 col-md-8 col-xs-12">
-             <%= link_to word.english, word,  class: "categories btn btn-block btn-lg btn-default" %>
-            </div>
-          </div>
-       <% end %>
-      </div>  
-     <% end %>   
-      
     </div>
+    <div class= "well">
+      <% category.words.each do |word| %>
+        <%= link_to word.english, word,  class: "categories btn btn-lg btn-default" %>
+      <% end %>
+    </div>
+    <% end %>   
   </div>
+</div>

@@ -121,6 +121,12 @@ Now we need to use bootstrap and customize
 
 Note: " " are important around string descriptions. That is what caused truncation of the words. 
 
+IMPORTANT! 
+Because this app does not have user sign in, anyone can add, edit and delete categories and words with the links!
+That means the app is not as secure as other apps.
+
+THE WORD MODEL in this Project uses the SAME FILE FOR THE WORD DESCRIPTION AS THE SOUND FILE.
+
 Good luck! 
 
 

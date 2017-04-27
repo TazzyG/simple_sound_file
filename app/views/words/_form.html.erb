@@ -19,10 +19,11 @@
     <%= f.label :afar %><br>
     <%= f.text_field :afar %>
   </div>
-  <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
-  </div>
+  <div class="form-tag">
+      <%= f.label :Category %> </br>
+        <%= f.collection_select(:category_id, 
+          Category.all, :id, :name) %>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>
