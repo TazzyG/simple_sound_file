@@ -1,7 +1,25 @@
 /// put custom css here, such as background image, etc. 
-.category {
+html {
+    background: asset-data-url("wallpaper.jpg");
     
 }
+
+.well {
+    opacity: 0.8;
+}
+
+body {
+    background-color: transparent;
+    color: #fff;
+    height: 100%;
+    a { color: #fff;
+    }
+}
+.category a, i{
+    color: #fff;
+    
+}
+
 .word {
     margin: 5px;
    
@@ -10,4 +28,9 @@
 #imagination {
     margin-top: 150px;
     color: purple;
+}
+
+
+.field, .actions {
+    color: black;
 }
