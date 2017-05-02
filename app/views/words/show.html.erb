@@ -19,11 +19,7 @@
        audio.play();
       </script>
    </p>
-   <div id="imagination" class= "text-center">
-    <h2>
-       <em> Only your imagination can tell you what will appear here in a future version of this app!</em>
-    </h2>
-   </div>
+   
    <p class = "text-center"> <%= link_to "Edit this Word", edit_word_path(@word) %> | <%= link_to 'Delete this Word', word_path(@word),
               method: :delete,
               data: { confirm: 'Are you sure?' } %> </p>
